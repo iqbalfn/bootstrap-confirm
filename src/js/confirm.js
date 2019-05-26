@@ -126,7 +126,7 @@ class Confirm {
     // Private
 
     _addElementListener(){
-        if(this._tagName === 'FORM' || !this._element.dataset.confirm){
+        if(this._tagName === 'FORM' || !this._element.dataset.toggle){
             $(this._element).on(this._eventType, (event) => {
                 this.ask(this, event)
             })

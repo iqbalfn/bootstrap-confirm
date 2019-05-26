@@ -314,7 +314,7 @@
     _proto._addElementListener = function _addElementListener() {
       var _this = this;
 
-      if (this._tagName === 'FORM' || !this._element.dataset.confirm) {
+      if (this._tagName === 'FORM' || !this._element.dataset.toggle) {
         $(this._element).on(this._eventType, function (event) {
           _this.ask(_this, event);
         });
