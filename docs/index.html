@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.min.css">
+
+    <title>Bootstrap Confirm</title>
+
+    <style>
+        h1{ margin-top: 80px; }
+        h2,h3{ margin-top: 40px; }
+        .example{ border: 4px solid #eee; margin-bottom:30px;}
+        .example-preview{ padding: 1.5rem; }
+        .example > pre{ border-top: 4px solid #eee;margin:0; }
+        .highlihgt-grid .row + .row{ margin-top: 1rem;}
+        .highlihgt-grid [class^="col-"]{
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            background-color: rgba(86,61,124,.15);
+            border: 1px solid rgba(86,61,124,.2);
+        }
+    </style>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-1746437125043617",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="#">Bootstrap Confirm</a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/iqbalfn/bootstrap-confirm">Github</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/iqbalfn/bootstrap-confirm/releases">Download</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h1>Confirm</h1>
+                <p class="lead">Use Bootstrap's JavaScript confirm plugin to ask for user awareness on clicking a link or submitting a form.</p>
+
+                <p>Please note that the modal element is removed right after disappear from screen.</p>
+
+                <section>
+                    <h2>Overview</h2>
+                    <p>Things to know when using the confirm helper</p>
+                    <ol>
+                        <li>The bootstrap version must be greater then or equal to 4.2</li>
+                        <li>If you're building Bootstrap JavaScript from source, make sure Modal plugin is included.</li>
+                        <li>This helper developed and tested under Bootstrap 4.3.1</li>
+                        <li>The modal element will be generated when user click the link or submit the form</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2>Examples</h2>
+
+                    <article>
+                        <section>
+                            <h3>Link</h3>
+                            <article>
+                                <p>This is the example of confirmation on link. Adding attribute <code>data-toggle="confirm"</code> to an <code>&lt;a&gt;</code> with other attribute for the info to add confirmation on it.</p>
+                                <div class="example">
+                                    <div class="example-preview source-code" data-hl="html">
+                                        <a href="http://iqbalfn.com/" class="btn btn-primary" data-toggle="confirm" data-title="Sure?" data-text="Are you sure want to leave this page?" data-btn-confirm="Let go">
+                                            Goto iqbalfn.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                        <section>
+                            <h3>Form</h3>
+                            <article>
+                                <p>The confirmation can also injected to a <code>&lt;form&gt;</code> element. For this to work, you need to add the confirmation manually by javascript.</p>
+                                <div class="example">
+                                    <div class="example-preview source-code" data-hl="html">
+                                        <form method="GET" id="form-1">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Your Name" name="name">
+                                            </div>
+                                            <div class="text-right">
+                                                <button class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </form>
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', function(){
+                                                $('#form-1').confirm({
+                                                    title: 'Sure?',
+                                                    text: 'Are you sure about the data?',
+                                                    btnConfirm: 'Yup',
+                                                    btnCancel: 'Nope'
+                                                })
+                                            })
+                                        </script>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                        <section>
+                            <h3>Link With JQuery</h3>
+                            <article>
+                                <p>The jQuery method also work for link instead of data attribute.</p>
+                                <div class="example">
+                                    <div class="example-preview source-code" data-hl="html">
+                                        <a href="http://iqbalfn.com/" class="btn btn-primary" id="link-1">
+                                            Goto iqbalfn.com
+                                        </a>
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', () => {
+                                                $('#link-1').confirm()
+                                            })
+                                        </script>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                    </article>
+                </section>
+
+                <section>
+                    <h2>Usage</h2>
+
+                    <article>
+                        <p>The confirm plugin generate your confirmation modal when it get executed ( click or submit ), via JavaScript
+                            or data attribute. For element <code>&lt;form&gt;</code> can only triggered by JavaScript because limitation of event the document can receive from the dom.</p>
+
+                        <section>
+                            <h3>Via data attribute</h3>
+                            <article>
+                                <p>Implementation with data attribute can only be done for <code>&lt;a&gt;</code> element. Set attribute <code>data-toggle="confirm"</code> on a <code>&lt;a&gt;</code> element.</p>
+
+                                <div class="example">
+                                    <div class="example-preview source-code" data-hl="html">
+                                        <a href="http://iqbalfn.com/" class="btn btn-primary" data-toggle="confirm">
+                                            Goto iqbalfn.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section>
+                            <h3>Via JavaScript</h3>
+                            <article>
+                                <p>Call an element with selector with single line of JavaScript.</p>
+                                <div class="example">
+                                    <div class="example-preview source-code" data-hl="html">
+                                        <a href="http://iqbalfn.com/" class="btn btn-primary" id="link-2">
+                                            Goto iqbalfn.com
+                                        </a>
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', () => {
+                                                $('#link-2').confirm()
+                                            })
+                                        </script>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section>
+                            <h3>Options</h3>
+                            <article>
+                                <p>Options can be passed via data attribute or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-title="..."</code>, or <code>data-btn-confirm="..."</code>.</p>
+
+                                <table class="table-striped table-bordered table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Default</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>title</td>
+                                            <td>string</td>
+                                            <td>Confirmation</td>
+                                            <td>The modal element title.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>text</td>
+                                            <td>string</td>
+                                            <td>Are you sure want to do the action?</td>
+                                            <td>The modal body text content.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ask</td>
+                                            <td>boolean</td>
+                                            <td>false</td>
+                                            <td>Show the modal confirmation when initilaized.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>btnConfirm</td>
+                                            <td>string</td>
+                                            <td>Yes</td>
+                                            <td>Text for confirm button</td>
+                                        </tr>
+                                        <tr>
+                                            <td>btnType</td>
+                                            <td>string</td>
+                                            <td>primary</td>
+                                            <td>Button type for confirmation button. Without prefix <code>btn-</code>.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>btnCancel</td>
+                                            <td>string</td>
+                                            <td>Cancel</td>
+                                            <td>Text for cancel button</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                        </section>
+                    </article>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.min.js" data-manual></script>
+    <script src="js/source.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/bootstrap-confirm.js"></script>
+</body>
+</html>
