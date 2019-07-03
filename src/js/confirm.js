@@ -1,7 +1,7 @@
 /**
  * --------------------------------------------------------------------------
  * Bootstrap Confirm (v0.0.1): confirm.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/iqbalfn/bootstrap-confirm/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
 
